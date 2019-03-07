@@ -30,13 +30,26 @@ spec:
             - name: config-datasource
               mountPath: /home/wso2/wso2am-2.6.0/repository/conf/datasources/master-datasources.xml
               subPath: master-datasources.xml
-#            - name: config-apim
-#              mountPath: /home/wso2/wso2am-2.6.0/repository/conf/
+            - name: config-apim
+              mountPath: /home/wso2/wso2am-2.6.0/repository/conf/api-manager.xml
+              subPath: api-manager.xml
+            - name: config-registry
+              mountPath: /home/wso2/wso2am-2.6.0/repository/conf/registry.xml
+              subPath: registry.xml
+            - name: config-usermgt
+              mountPath: /home/wso2/wso2am-2.6.0/repository/conf/user-mgt.xml
+              subPath: user-mgt.xml
       volumes:
         - name: config-datasource
           configMap:
             name: config-datasource
-#        - name: config-apim
-#          configMap:
-#            name: config-apim
+        - name: config-apim
+          configMap:
+            name: config-apim
+        - name: config-registry
+          configMap:
+            name: config-registry
+        - name: config-usermgt
+          configMap:
+            name: config-usermgt
             

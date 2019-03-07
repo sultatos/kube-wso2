@@ -1,4 +1,0 @@
-oc create configmap config-apim --from-file=./configs
- oc create configmap init-data --from-file=./scripts
-
-172.30.1.1:5000/wso2/wso2am
