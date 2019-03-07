@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apim-deployment
+  labels:
+    app: apim
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apim
+  template:
+    metadata:
+      labels:
+        app: apim
+    spec:
+      containers:
+        - name: apim
+          image: 172.30.1.1:5000/wso2/wso2am:latest
+          ports:
+            - containerPort: 9763
+              protocol: TCP
+            - containerPort: 9443
+              protocol: TCP
+            - containerPort: 8280
+              protocol: TCP
+            - containerPort: 8243
+              protocol: TCP
+          volumeMounts:
+            - name: config-datasource
+              mountPath: /home/wso2/wso2am-2.6.0/repository/conf/datasources/master-datasources.xml
+              subPath: master-datasources.xml
+#            - name: config-apim
+#              mountPath: /home/wso2/wso2am-2.6.0/repository/conf/
+      volumes:
+        - name: config-datasource
+          configMap:
+            name: config-datasource
+#        - name: config-apim
+#          configMap:
+#            name: config-apim
+            
