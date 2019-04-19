@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: is
-        image: anupamgogoi/is-570:latest
+        imagePullPolicy: Never # When using local image please use this parameter.
+        image: anupamgogoi/is-570
         ports:
         - containerPort: 9443
           protocol: TCP
