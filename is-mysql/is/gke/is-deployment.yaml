@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: is-deployment
+  labels:
+    app: is
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: is
+  template:
+    metadata:
+      labels:
+        app: is
+    spec:
+      containers:
+      - name: is
+        image: gcr.io/wso2-is-238521/anupamgogoi/is-570 # Your image somewhere in your docker registry
+        ports:
+        - containerPort: 9443
+          protocol: TCP
+
