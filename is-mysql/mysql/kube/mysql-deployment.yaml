@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: gcr.io/wso2-is/mysql:5.7
+          image: mysql:5.7
           env:
             - name: MYSQL_ROOT_PASSWORD
               value: root

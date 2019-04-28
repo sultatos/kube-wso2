@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: is
-        image: gcr.io/wso2-is-238521/anupamgogoi/is-570 # Your image somewhere in your docker registry (local,cloud)
+        image: gcr.io/wso2-is-4/anupamgogoi/is-570 # Your image somewhere in your docker registry (local,cloud)
         ports:
         - containerPort: 9443
           protocol: TCP
