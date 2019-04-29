@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1938a1c8-096c-4244-8ea7-2a94210d4886" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/is-postgres/postgres/kube/postgres-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/is-postgres/postgres/kube/postgres-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/is-postgres/postgres/scripts/identitydb_postgresql.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/is-postgres/postgres/scripts/userdb_postgresql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/is-postgres/is/configs/embedded-ldap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/is-postgres/is/configs/identity.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/is-postgres/is/configs/master-datasources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/is-postgres/is/configs/user-mgt.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is-postgres/postgres/kube/postgres-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/is-postgres/postgres/kube/postgres-service.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +24,8 @@
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="7" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.open.time.6" value="8" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -33,17 +34,17 @@
           <entry key="sql" value="20" />
           <entry key="text" value="1" />
           <entry key="txt" value="1" />
-          <entry key="xml" value="13" />
-          <entry key="yaml" value="46" />
+          <entry key="xml" value="17" />
+          <entry key="yaml" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="DBN-SQL" value="20" />
-          <entry key="Kubernetes YAML" value="45" />
+          <entry key="Kubernetes YAML" value="49" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Specification" value="8" />
-          <entry key="XML" value="13" />
+          <entry key="XML" value="17" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -52,7 +53,7 @@
           <entry key="md" value="426" />
           <entry key="sql" value="55" />
           <entry key="text" value="62" />
-          <entry key="xml" value="43" />
+          <entry key="xml" value="69" />
           <entry key="yaml" value="443" />
         </counts>
       </usages-collector>
@@ -62,41 +63,13 @@
           <entry key="Kubernetes YAML" value="443" />
           <entry key="PLAIN_TEXT" value="62" />
           <entry key="Specification" value="426" />
-          <entry key="XML" value="43" />
+          <entry key="XML" value="69" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/is-postgres/postgres/kube/postgres-deployment.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/is-postgres/postgres/scripts/identitydb_postgresql.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/is-postgres/postgres/scripts/userdb_postgresql.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -135,6 +108,8 @@
         <option value="$PROJECT_DIR$/is-mysql/mysql/scripts/identitydb_mysql-5.7.sql" />
         <option value="$PROJECT_DIR$/is-postgres/postgres/scripts/userdb_postgresql.sql" />
         <option value="$PROJECT_DIR$/is-postgres/postgres/scripts/identitydb_postgresql.sql" />
+        <option value="$PROJECT_DIR$/is-postgres/postgres/kube/postgres-service.yaml" />
+        <option value="$PROJECT_DIR$/is-postgres/is/configs/master-datasources.xml" />
       </list>
     </option>
   </component>
@@ -149,7 +124,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,81 +132,25 @@
               <item name="kube-wso2" type="b2602c69:ProjectViewProjectNode" />
               <item name="kube-wso2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="kube-wso2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kube-wso2" type="462c0819:PsiDirectoryNode" />
-              <item name="is-mysql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kube-wso2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kube-wso2" type="462c0819:PsiDirectoryNode" />
-              <item name="is-mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="is" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kube-wso2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kube-wso2" type="462c0819:PsiDirectoryNode" />
-              <item name="is-mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kube-wso2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kube-wso2" type="462c0819:PsiDirectoryNode" />
-              <item name="is-mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="kube" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kube-wso2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kube-wso2" type="462c0819:PsiDirectoryNode" />
-              <item name="is-mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kube-wso2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kube-wso2" type="462c0819:PsiDirectoryNode" />
-              <item name="is-postgres" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kube-wso2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kube-wso2" type="462c0819:PsiDirectoryNode" />
-              <item name="is-postgres" type="462c0819:PsiDirectoryNode" />
-              <item name="postgres" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kube-wso2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kube-wso2" type="462c0819:PsiDirectoryNode" />
-              <item name="is-postgres" type="462c0819:PsiDirectoryNode" />
-              <item name="postgres" type="462c0819:PsiDirectoryNode" />
-              <item name="kube" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kube-wso2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kube-wso2" type="462c0819:PsiDirectoryNode" />
-              <item name="is-postgres" type="462c0819:PsiDirectoryNode" />
-              <item name="postgres" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556480318958" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556540505457" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/is-postgres/is" />
       <recent name="$PROJECT_DIR$/is-postgres/postgres/scripts" />
       <recent name="$PROJECT_DIR$/is-postgres/postgres/kube" />
       <recent name="$PROJECT_DIR$/is-mysql/is/gke" />
       <recent name="$PROJECT_DIR$/is-mysql/is/lib" />
-      <recent name="$PROJECT_DIR$/is-mysql/mysql/kube" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -261,9 +180,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="23" width="1383" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25055927" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25428784" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -281,7 +199,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.37197453" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.39617833" />
       <window_info anchor="bottom" id="Docker" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Console" order="11" />
@@ -409,9 +327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/is-postgres/postgres/kube/postgres-service.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/is-mysql/mysql/scripts/userdb_mysql5.7.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -426,13 +341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/is-postgres/postgres/kube/postgres-deployment.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/is-postgres/postgres/scripts/userdb_postgresql.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -443,7 +351,36 @@
     <entry file="file://$PROJECT_DIR$/is-postgres/postgres/scripts/identitydb_postgresql.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/is-postgres/postgres/kube/postgres-deployment.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/is-postgres/is/configs/embedded-ldap.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/is-postgres/is/configs/identity.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/is-postgres/postgres/kube/postgres-service.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/is-postgres/is/configs/master-datasources.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="59" column="75" selection-start-line="59" selection-start-column="75" selection-end-line="59" selection-end-column="75" />
         </state>
       </provider>
     </entry>

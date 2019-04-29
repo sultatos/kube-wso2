@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: is-deployment
+  labels:
+    app: is
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: is
+  template:
+    metadata:
+      labels:
+        app: is
+    spec:
+      containers:
+      - name: is
+        imagePullPolicy: Never # When using local image please use this parameter.
+        image: anupamgogoi/is-570
+        ports:
+        - containerPort: 9443
+          protocol: TCP
+        volumeMounts:
+        - name: config-datasource
+          mountPath: /opt/wso2/wso2is-5.7.0/repository/conf/datasources/master-datasources.xml
+          subPath: master-datasources.xml
+        - name: config-usermgt
+          mountPath: /opt/wso2/wso2is-5.7.0/repository/conf/user-mgt.xml
+          subPath: user-mgt.xml
+        - name: config-identity
+          mountPath: /opt/wso2/wso2is-5.7.0/repository/conf/identity/identity.xml
+          subPath: identity.xml
+        - name: config-ldap
+          mountPath: /opt/wso2/wso2is-5.7.0/repository/conf/identity/embedded-ldap.xml
+          subPath: embedded-ldap.xml
+      volumes:
+      - name: config-datasource
+        configMap:
+          name: config-datasource
+      - name: config-usermgt
+        configMap:
+          name: config-usermgt
+      - name: config-identity
+        configMap:
+          name: config-identity
+      - name: config-ldap
+        configMap:
+          name: config-ldap
+
