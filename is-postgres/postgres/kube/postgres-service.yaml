@@ -7,7 +7,7 @@ spec:
   selector:
     app: postgres
   ports:
-  - name: mysql-port
-    port: 3306
-    targetPort: 3306
+  - name: postgres-port
+    port: 5432
+    targetPort: 5432
     protocol: TCP
