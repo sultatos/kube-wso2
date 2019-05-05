@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><UserStoreManager class="com.panera.user.store.PDUserStoreManager">
+      <Property name="url">jdbc:oracle:thin:@oracle-xe-service.hello.svc.cluster.local:1521:xe</Property>
+      <Property name="userName">paneradb</Property>
+      <Property name="password">paneradb</Property>
+      <Property name="driverName">oracle.jdbc.driver.OracleDriver</Property>
+      <Property name="Disabled">false</Property>
+      <Property name="ReadOnly">false</Property>
+      <Property name="ReadGroups">true</Property>
+      <Property name="WriteGroups">true</Property>
+      <Property name="UsernameJavaRegEx">^[\S]{5,30}$</Property>
+      <Property name="UsernameJavaScriptRegEx">^[\S]{5,30}$</Property>
+      <Property name="UsernameJavaRegExViolationErrorMsg">Username pattern policy violated.</Property>
+      <Property name="PasswordJavaRegEx">^[\S]{5,30}$</Property>
+      <Property name="PasswordJavaScriptRegEx">^[\S]{5,30}$</Property>
+      <Property name="PasswordJavaRegExViolationErrorMsg">Password pattern policy violated.</Property>
+      <Property name="RolenameJavaRegEx">^[\S]{5,30}$</Property>
+      <Property name="RolenameJavaScriptRegEx">^[\S]{5,30}$</Property>
+      <Property name="CaseInsensitiveUsername">true</Property>
+      <Property name="callAuthenticateSP">select pkg_globalauth.authenticate_user(?, ?) from dual</Property>
+      <Property name="GetRoleListSQL">SELECT NAME FROM DIR_GROUP WHERE NAME LIKE ? ORDER BY NAME</Property>
+      <Property name="UserFilterSQL">SELECT USERNAME FROM DIR_USER WHERE USERNAME LIKE ? ORDER BY USERNAME</Property>
+      <Property name="UserRoleSQL">SELECT NAME FROM DIR_USER_GROUP, DIR_GROUP, DIR_USER WHERE DIR_USER.USERNAME=? AND DIR_USER.DIR_USER_ID=DIR_USER_GROUP.DIR_USER_ID AND DIR_GROUP.DIR_GROUP_ID=DIR_USER_GROUP.DIR_GROUP_ID</Property>
+      <Property name="IsRoleExistingSQL">SELECT DIR_GROUP_ID FROM DIR_GROUP WHERE NAME=?</Property>
+      <Property name="GetUserListOfRoleSQL">SELECT USERNAME FROM DIR_USER_GROUP, DIR_GROUP, DIR_USER WHERE DIR_GROUP.NAME=? AND DIR_USER.DIR_USER_ID=DIR_USER_GROUP.DIR_USER_ID AND DIR_GROUP.DIR_GROUP_ID=DIR_USER_GROUP.DIR_GROUP_ID</Property>
+      <Property name="IsUserExistingSQL">SELECT DIR_USER_ID FROM DIR_USER WHERE USERNAME=?</Property>
+      <Property name="GetUserPropertiesForProfileSQL">SELECT * FROM DIR_USER WHERE USERNAME=?</Property>
+      <Property name="GetUserLisForPropertySQL">SELECT * FROM DIR_USER WHERE ?=?</Property>
+      <Property name="DomainName">oracle.com</Property>
+      <Property name="Description"/>
+</UserStoreManager>

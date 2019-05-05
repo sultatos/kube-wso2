@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: is-deployment
+  labels:
+    app: is
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: is
+  template:
+    metadata:
+      labels:
+        app: is
+    spec:
+      containers:
+      - name: is
+        imagePullPolicy: Never # When using local image please use this parameter.
+        image: is-ext-userstore:1.0.0
+        ports:
+        - containerPort: 9443
+          protocol: TCP
+        volumeMounts:
+          - name: custom-user-store
+            mountPath: /home/wso2carbon/wso2is-5.7.0/repository/deployment/server/userstores
+      volumes:
+        - name: custom-user-store
+          configMap:
+            name: custom-user-store
+

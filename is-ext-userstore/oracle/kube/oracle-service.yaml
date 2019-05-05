@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: oracle-xe-service
+spec:
+  type: ClusterIP
+  selector:
+    app: oracle-xe
+  ports:
+  - name: oracle-xe-port
+    port: 1521
+    targetPort: 1521
+    protocol: TCP
