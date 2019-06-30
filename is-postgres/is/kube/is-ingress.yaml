@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: wso2is-ingress
+  namespace: wso2
+spec:
+  tls:
+  - secretName: is-cert
+  rules:
+  - host: wso2is.app
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: wso2is-service
+          servicePort: 9443

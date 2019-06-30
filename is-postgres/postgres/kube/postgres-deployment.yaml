@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres:latest
+          image: gcr.io/wso2-is-17/postgres
           env:
             - name: POSTGRES_USER
               value: wso2

@@ -1,0 +1,13 @@
+apiVersion: cloud.google.com/v1beta1
+kind: BackendConfig
+metadata:
+  name: wso2is-backendconfig
+spec:
+#  securityPolicy:
+#    name: "wso2-api-policy"
+  timeoutSec: 40
+  connectionDraining:
+    drainingTimeoutSec: 60
+  sessionAffinity:
+    affinityType: "GENERATED_COOKIE"
+    affinityCookieTtlSec: 86400

@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: is
-        imagePullPolicy: Never # When using local image please use this parameter.
-        image: anupamgogoi/is-570
+#        imagePullPolicy: Never # When using local image please use this parameter.
+        image: gcr.io/wso2-is-17/wso2is
         ports:
         - containerPort: 9443
           protocol: TCP
