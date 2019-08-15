@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: is-deployment
+  labels:
+    app: is
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: is
+  template:
+    metadata:
+      labels:
+        app: is
+    spec:
+      containers:
+      - name: is
+        imagePullPolicy: Never
+        image: gcr.io/wso2-is-17/wso2is
+        ports:
+        - containerPort: 9443
+          protocol: TCP
+        volumeMounts:
+        - name: config-carbon
+          mountPath: /opt/wso2/wso2is-5.7.0/repository/conf/carbon.xml
+          subPath: carbon.xml
+        - name: config-ldap
+          mountPath: /opt/wso2/wso2is-5.7.0/repository/conf/identity/embedded-ldap.xml
+          subPath: embedded-ldap.xml
+        - name: config-keystore
+          mountPath: /opt/wso2/wso2is-5.7.0/repository/resources/security/wso2carbon.jks
+          subPath: wso2carbon.jks
+        - name: config-client-truststore
+          mountPath: /opt/wso2/wso2is-5.7.0/repository/resources/security/client-truststore.jks
+          subPath: client-truststore.jks
+      volumes:
+      - name: config-carbon
+        configMap:
+          name: config-carbon
+      - name: config-ldap
+        configMap:
+          name: config-ldap
+      - name: config-keystore
+        configMap:
+          name: config-keystore
+      - name: config-client-truststore
+        configMap:
+          name: config-client-truststore
+
