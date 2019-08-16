@@ -1,34 +1,32 @@
-FROM openjdk:8u201-jdk-alpine3.9
-MAINTAINER agogoi@wso2.com
+FROM adoptopenjdk/openjdk8:jdk8u192-b12-alpine
+MAINTAINER anupam@wso2.com
 
-# Variables
-ARG WSO2_SERVER_HOME=/opt/wso2/wso2is-5.7.0
+# Set user configurations
+ARG USER=wso2carbon
+ARG USER_ID=802
+ARG USER_GROUP=wso2
+ARG USER_GROUP_ID=802
+ARG USER_HOME=/home/${USER}
+ARG WSO2_SERVER_HOME=${USER_HOME}/wso2is-5.7.0
 
-# Create group (wso2) and add user (wso2carbon).
-RUN  addgroup -g 802 wso2
-RUN  adduser -u 802 -D -G wso2 wso2carbon
+# create a user group and a user
+RUN  addgroup -g ${USER_GROUP_ID} ${USER_GROUP}
+RUN  adduser -u ${USER_ID} -D -g '' -h ${USER_HOME} -G ${USER_GROUP} ${USER}
 
-# Copy the necessary product zip.
-COPY files/wso2is-5.7.0 ${WSO2_SERVER_HOME}
-COPY init.sh /opt/wso2
+# Copy wso2 product and kubernetes membership libs.
+COPY files/product/wso2is-5.7.0 ${WSO2_SERVER_HOME}/
+COPY files/libs/dnsjava-2.1.8.jar ${WSO2_SERVER_HOME}/repository/components/lib/
+COPY files/libs/kubernetes-membership-scheme-1.0.5.jar ${WSO2_SERVER_HOME}/repository/components/dropins/
+RUN chown -R wso2carbon:wso2 ${WSO2_SERVER_HOME}/
 
-# Add libraries for Kubernetes membership scheme based clustering
-ADD --chown=wso2carbon:wso2 https://repo1.maven.org/maven2/dnsjava/dnsjava/2.1.8/dnsjava-2.1.8.jar ${WSO2_SERVER_HOME}/repository/components/lib/
-ADD --chown=wso2carbon:wso2 https://repo1.maven.org/maven2/org/wso2/carbon/kubernetes/artifacts/kubernetes-membership-scheme/1.0.5/kubernetes-membership-scheme-1.0.5.jar ${WSO2_SERVER_HOME}/repository/components/dropins/
+# copy init script to user home
+COPY init.sh ${USER_HOME}/
+RUN chown -R wso2carbon:wso2 ${USER_HOME}/init.sh
+RUN chmod +x ${USER_HOME}/init.sh
 
-# Give permission to the user.
-RUN chown -R wso2carbon:wso2 /opt/wso2
 
-# Switch to user wso2carbon.
-USER wso2carbon
-
-# Set environment variables.
 ENV WSO2_SERVER_HOME=${WSO2_SERVER_HOME}
-
-# Set working directory
-WORKDIR /opt/wso2/wso2is-5.7.0
-
-# Expose ports
-EXPOSE 4000 9763 9443
-
-ENTRYPOINT ["/opt/wso2/init.sh"]
+USER ${USER_ID}
+WORKDIR ${USER_HOME}
+EXPOSE 9763 9443
+ENTRYPOINT ["/home/wso2carbon/init.sh"]
