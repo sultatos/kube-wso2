@@ -2,21 +2,20 @@
 
 # Login and create project.
 oc login -u developer -p developer
-oc new-project wso2is
+oc new-project wso2
 
 # Create service account.
-oc create serviceaccount wso2svc-account -n wso2is
+oc create serviceaccount wso2svc-account -n wso2
 
 # Create config maps
-oc create cm config-carbon --from-file=./configs/carbon.xml -n wso2is
-oc create cm config-keystore --from-file=./configs/keystores/wso2carbon.jks -n wso2is
-oc create cm config-client-truststore --from-file=./configs/keystores/client-truststore.jks -n wso2is
+oc create cm config-carbon --from-file=./configs/carbon.xml -n wso2
 
 # Create RBAC
-oc apply -f kube/rbac.yaml -n wso2is
+oc apply -f kube/rbac.yaml -n wso2
 
 # Create service
-oc apply -f kube/is-service.yaml -n wso2is
+oc apply -f kube/is-service.yaml -n wso2
+
 
 
 # Utils

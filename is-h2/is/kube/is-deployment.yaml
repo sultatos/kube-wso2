@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: is
-        image: 172.30.1.1:5000/wso2is/is
+        image: 172.30.1.1:5000/wso2/is
         imagePullPolicy: Never
 #        securityContext:
 #          runAsUser: 802
@@ -31,20 +31,8 @@ spec:
         - name: config-carbon
           mountPath: /home/wso2carbon/wso2is-5.7.0/repository/conf/carbon.xml
           subPath: carbon.xml
-        - name: config-keystore
-          mountPath: /home/wso2carbon/wso2is-5.7.0/repository/resources/security/wso2carbon.jks
-          subPath: wso2carbon.jks
-        - name: config-client-truststore
-          mountPath: /home/wso2carbon/wso2is-5.7.0/repository/resources/security/client-truststore.jks
-          subPath: client-truststore.jks
       serviceAccountName: "wso2svc-account"
       volumes:
       - name: config-carbon
         configMap:
           name: config-carbon
-      - name: config-keystore
-        configMap:
-          name: config-keystore
-      - name: config-client-truststore
-        configMap:
-          name: config-client-truststore
