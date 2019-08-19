@@ -4,7 +4,7 @@ metadata:
   namespace: wso2
   name: is-route
 spec:
-  host: localhost
+  host: is.wso2.com
   port:
     targetPort: servlet-https
   tls:
