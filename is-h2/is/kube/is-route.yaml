@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Route
 metadata:
-  name: wso2is-as-km
+  name: is-router
 spec:
   host: XX_IS_HOST_NAME_XX
   port:

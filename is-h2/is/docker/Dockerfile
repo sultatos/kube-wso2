@@ -17,7 +17,10 @@ RUN  adduser -u ${USER_ID} -D -g '' -h ${USER_HOME} -G ${USER_GROUP} ${USER}
 COPY files/product/wso2is-5.7.0 ${WSO2_SERVER_HOME}/
 COPY files/libs/dnsjava-2.1.8.jar ${WSO2_SERVER_HOME}/repository/components/lib/
 COPY files/libs/kubernetes-membership-scheme-1.0.5.jar ${WSO2_SERVER_HOME}/repository/components/dropins/
+
+RUN chmod 777 -R ${WSO2_SERVER_HOME}/
 RUN chown -R wso2carbon:wso2 ${WSO2_SERVER_HOME}/
+
 
 # copy init script to user home
 COPY init.sh ${USER_HOME}/
