@@ -1,8 +1,4 @@
-# Minishift Configuration
-```
-$ oc login -u system:admin -n wso2is
-$ oc adm policy add-scc-to-user anyuid -z default -n wso2is
-```
+
 
 # Create Config Maps
 ```
