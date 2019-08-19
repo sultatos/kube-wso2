@@ -16,6 +16,9 @@ oc apply -f kube/rbac.yaml -n wso2
 # Create service
 oc apply -f kube/is-service.yaml -n wso2
 
+# Create route
+oc apply -f kube/is-route.yaml -n wso2
+
 
 
 # Utils

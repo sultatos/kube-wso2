@@ -1,13 +1,14 @@
-apiVersion: v1
+apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: is-router
+  namespace: wso2
+  name: is-route
 spec:
-  host: XX_IS_HOST_NAME_XX
+  host: localhost
   port:
     targetPort: servlet-https
+  tls:
+    termination: passthrough
   to:
     kind: Service
     name: is-service
-  tls:
-    termination: passthrough
