@@ -19,6 +19,9 @@ oc apply -f kube/is-service.yaml -n wso2
 # Create route
 oc apply -f kube/is-route.yaml -n wso2
 
+# Create deployment
+oc apply -f kube/is-deployment.yaml -n wso2
+
 
 
 # Utils

@@ -7,8 +7,6 @@ $ oc adm policy add-scc-to-user anyuid -z default -n wso2is
 # Create Config Maps
 ```
 $ oc create cm config-carbon --from-file=./configs/carbon.xml -n wso2is
-$ oc create cm config-keystore --from-file=./configs/keystores/wso2carbon.jks -n wso2is
-$ oc create cm config-client-truststore --from-file=./configs/keystores/client-truststore.jks -n wso2is
 ```
 
 # Create Service Account
