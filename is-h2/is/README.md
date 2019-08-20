@@ -1,21 +1,2 @@
-
-
-# Create Config Maps
-```
-$ oc create cm config-carbon --from-file=./configs/carbon.xml -n wso2is
-```
-
-# Create Service Account
-```
-$ oc create serviceaccount wso2svc-account -n wso2is
-```
-# Run Deployment
-```
-$ oc apply -f kube/rbac.yaml -n wso2is
-$ oc apply -f kube/is-service.yaml -n wso2is
-```
-
-# Docker
-```
-$ docker tag is 172.30.1.1:5000/wso2is/is
-```
+Read the article:
+https://dzone.com/articles/wso2-identity-server-in-openshift
