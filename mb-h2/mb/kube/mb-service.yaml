@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     deploymentconfig: mb-deployment
+  type: LoadBalancer
   ports:
   -
     name: servlet-http
