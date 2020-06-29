@@ -9,6 +9,9 @@ ARG USER_GROUP_ID=802
 ARG USER_HOME=/home/${USER}
 ARG WSO2_SERVER_HOME=${USER_HOME}/wso2ei-6.4.0
 
+# Install necessary softwares
+RUN  apk add iputils
+
 # create a user group and a user
 RUN  addgroup -g ${USER_GROUP_ID} ${USER_GROUP}
 RUN  adduser -u ${USER_ID} -D -g '' -h ${USER_HOME} -G ${USER_GROUP} ${USER}
