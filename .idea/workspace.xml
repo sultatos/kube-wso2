@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1938a1c8-096c-4244-8ea7-2a94210d4886" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mb-h2/mb/docker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mb-h2/mb/docker/init.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mb-h2/mb/kube/mb-deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mb-h2/mb/kube/mb-service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb-h2/mb/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/mb-h2/mb/docker/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +37,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/is-h2/is/docker/files/product/wso2is-5.7.0/repository/conf/axis2/axis2.xml&#10;true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566309662131" />
     <property name="ignore_missing_gitignore" value="true" />
@@ -83,5 +81,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
