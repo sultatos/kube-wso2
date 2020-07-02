@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1938a1c8-096c-4244-8ea7-2a94210d4886" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mb-h2/mb/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/mb-h2/mb/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb-h2/mb/kube/mb-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mb-h2/mb/kube/mb-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb-h2/mb/kube/mb-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mb-h2/mb/kube/mb-service.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,25 +39,29 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/is-h2/is/docker/files/product/wso2is-5.7.0/repository/conf/axis2/axis2.xml&#10;true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566309662131" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mb-h2/mb/kube" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ei-h2/ei/docker" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mb-h2/mb/kube" />
-      <recent name="$PROJECT_DIR$/mb-h2/mb/docker" />
-      <recent name="$PROJECT_DIR$/is-h2/is/docker/files/product/wso2is-5.7.0/repository/resources/security" />
-      <recent name="$PROJECT_DIR$/is-h2/is/docker" />
-      <recent name="$PROJECT_DIR$/is-h2/is/kube" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ei-h2/ei/docker/files/product" />
+      <recent name="$PROJECT_DIR$/ei-h2/ei/configs" />
       <recent name="$PROJECT_DIR$/is-h2/is/docker/files/product" />
       <recent name="$PROJECT_DIR$/is-ext-userstore/is/docker" />
       <recent name="$PROJECT_DIR$/is-ext-userstore/is/docker/files" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ei-h2/ei/docker" />
+      <recent name="$PROJECT_DIR$/mb-h2/mb/configs" />
+      <recent name="$PROJECT_DIR$/mb-h2/mb/kube" />
+      <recent name="$PROJECT_DIR$/mb-h2/mb/docker" />
+      <recent name="$PROJECT_DIR$/is-h2/is/docker/files/product/wso2is-5.7.0/repository/resources/security" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -82,5 +88,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2277" y="410" key="#Notifications" timestamp="1593702170236">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2277" y="410" key="#Notifications/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1593702170236" />
+    <state x="1697" y="105" key="SettingsEditor" timestamp="1593702134735">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1697" y="105" key="SettingsEditor/56.23.1384.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1593702134735" />
   </component>
 </project>
